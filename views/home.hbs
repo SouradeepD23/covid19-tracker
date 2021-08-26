@@ -1,0 +1,11 @@
+<h1>Covid-19 country wise data</h1>
+{{#each info}}
+    <div class="d-block">
+        <div class="d-inline-flex"><h4>{{ this.country }}</h4></div><br>
+        <div class="d-inline-flex"><img src="{{ this.countryInfo.flag}}" /></div><br>
+        <div class="d-inline-flex">Total Cases:&nbsp<h5>{{this.cases}}</h5></div><br>
+        <div class="d-inline-flex">Active cases:&nbsp<h5>{{this.active}}</h5><p class="text-warning">+{{this.todayCases}}</p></div><br>
+        <div class="d-inline-flex">Total deaths:&nbsp<h5>{{this.deaths}}</h5><p class="text-danger">+{{this.todayDeaths}}</p></div><br>
+        <div class="d-inline-flex">Total recovered:&nbsp<h5>{{this.recovered}}</h5><p class="text-success">+{{this.todayRecovered}}</p></div><br>
+    </div>
+{{/each}}
